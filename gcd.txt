@@ -1,0 +1,30 @@
+
+#include <iostream>
+
+using namespace std;
+int findGCD(int,int);
+int main()
+{
+   int first,second;
+   cout<<"Enter First Number";
+   cin>>first;
+   cout<<"Enter Second Number";
+   cin>>second;
+   cout<<"GCD of Numbers"<<findGCD(first,second);
+    return 0;
+}
+int findGCD(int first,int second){
+    if(first==0){
+        return second;
+    }
+    if(second==0){
+        return first;
+    }
+    if(first==second){
+        return first;
+    }
+    else if(first> second){
+        return findGCD(first - second,second);
+    }
+    return  findGCD(first,second-first);
+}

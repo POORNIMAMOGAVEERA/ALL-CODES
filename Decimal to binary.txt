@@ -1,0 +1,22 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int convert(int n){
+    long sum=0;
+    int temp,i=0;
+    while(n!=0){
+    temp = n%2;
+    sum += temp*pow(10,i);
+    n /= 2;
+    i++;
+    }
+    return sum;
+}
+int main()
+{
+   int first;
+   cout<<"Enter Decimal Number";
+   cin>>first;
+   cout<<"Binary of Number:"<<convert(first);
+    return 0;
+}

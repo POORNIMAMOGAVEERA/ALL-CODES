@@ -1,0 +1,21 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int convert(int n){
+    int sum=0,temp,i=0;
+    while(n!=0){
+    temp = n%10;
+    sum +=temp*pow(2,i);
+    n/=10;
+    i++;
+    }
+    return sum;
+}
+int main()
+{
+   int first;
+   cout<<"Enter binary Number";
+   cin>>first;
+   cout<<"Decimal of Number:"<<convert(first);
+    return 0;
+}

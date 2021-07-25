@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int findGCD(int x1,int x2){
+    int gcd;
+    for(int i=1;i<=n1&&i<=n2;i++){
+        if(x1%i==0&&x2%i==0){
+            gcd=i;
+        }
+    }
+    return gcd;
+}
+int main()
+{
+    int n1,n2,n3,d1,d2,d3;
+    cout<<"Enter the numerator and denominator";
+    cin>>n1>>d1;
+    cout<<"Enter the numerator and denominator";
+    cin>>n2>>d2;
+    int lcm=(d1*d2)/findGCD(d1,d2);
+    int sum=(n1*lcm/d1)+(n2*lcm/d2);
+    n3=sum/findGCD(sum,lcm);
+    lcm=lcm/findGCD(sum,lcm);
+    cout<<n1<<"/"<<d1<<" + "<<n2<<"/"<<d2<<" = "<<n3<<"/"<<lcm;
+    return 0;
+}

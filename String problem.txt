@@ -1,0 +1,64 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+    int T;
+    string str;
+    cin>>T;
+    while(T--){
+      cin>>str;
+      int i=0,lflag=1,uflag=1,lvowel[5]={0},uvowel[5]={0};     
+          while(str[i] !='\0'){
+           if(str[i]=='a'){
+               lvowel[0]=1;
+           }
+           else if(str[i]=='e'){
+               lvowel[1]=1;
+           }
+           else if(str[i]=='i'){
+               lvowel[2]=1;
+           }
+           else if(str[i]=='o'){
+               lvowel[3]=1;
+           }
+           else if(str[i]=='u'){
+               lvowel[4]=1;
+           }
+           else if(str[i]=='A'){
+               uvowel[0]=1;
+           }
+           else if(str[i]=='E'){
+               uvowel[1]=1;
+           }
+           else if(str[i]=='I'){
+               uvowel[2]=1;
+           }
+           else if(str[i]=='O'){
+               uvowel[3]=1;
+           }
+           else if(str[i]=='U'){
+               uvowel[4]=1;
+           }
+           i++;
+    }      
+          for(int j=0;j<5;j++){
+              if(lvowel[j] != 1){
+                lflag=0;
+                break;
+              }
+          }
+          for(int j=0;j<5;j++){
+              if(uvowel[j] != 1){
+                uflag=0;
+                break;
+              }
+          } 
+          if(lflag==1||uflag==1){
+              cout<<"lovely string"<<endl;
+          }
+          if(lflag==0 && uflag==0){
+              cout<<"ugly string"<<endl;
+          }              
+      }
+    return 0;
+}

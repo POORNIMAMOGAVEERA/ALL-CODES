@@ -1,0 +1,28 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int convert(long n){
+    int binary=0,rem,i=0,res=0;
+    while(n!=0){
+    rem = n%10;
+    res += rem*pow(8,i);
+    n /= 10;
+    i++;
+    }
+    i=0;
+    while(res!=0){
+    rem = res%2;
+    binary += rem*pow(10,i);
+    res /= 2;
+    i++;
+    }
+    return binary;
+}
+int main()
+{
+   long first;
+   cout<<"Enter Octal Number";
+   cin>>first;
+   cout<<"Binary of Number:"<<convert(first);
+    return 0;
+}

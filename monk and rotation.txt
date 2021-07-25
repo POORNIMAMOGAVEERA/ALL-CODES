@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int T,N,K;
+    cin>>T;
+    while(T--){
+        cin>>N>>K;
+        int A[N],B;
+        for(int i=0;i<N;i++){
+        cin>>A[i];
+        }
+        K=K%N;
+        for(int i=0;i<N;i++){
+           B=A[(i+(N-K))%N];
+           cout<<B<<" "; 
+        }
+        cout<<"\n";
+    }
+    return 0;
+}

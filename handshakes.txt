@@ -1,0 +1,15 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+   int n,h;
+   cout<<"Enter the persons:";
+   cin>>n;
+   cout<<"Maximum no of handshakes:";
+   h=(n*(n - 1))/2;
+   cout<<h;
+   return 0;
+}
+
